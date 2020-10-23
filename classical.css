@@ -1,0 +1,346 @@
+ :root {
+  --background-color: white;
+  --body-font: 'source-serif-pro', serif;
+  --font-size: 20px;
+  --line-height: 1.5;
+}
+
+@font-face {
+    font-family: 'source-serif-pro';
+    font-style: normal;
+    font-weight: normal;
+    src: local('source-serif-pro'), local('SourceSerifPro-Regular'), url('./classical/SourceSerifPro-Regular.ttf');
+}
+@font-face {
+    font-family: 'source-serif-pro';
+    font-style: normal;
+    font-weight: bold;
+    src: local('source-serif-pro'), local('SourceSerifPro-Semibold'), url('./classical/SourceSerifPro-Semibold.ttf');
+}
+@font-face {
+    font-family: 'source-serif-pro';
+    font-style: italic;
+    font-weight: normal;
+    src: local('source-serif-pro'), local('SourceSerifPro-Italic'), url('./classical/SourceSerifPro-Italic.ttf')
+}
+
+html {
+	font-size: var(--font-size);
+	background-color: var(--background-color);
+}
+
+html,
+body,
+#write{
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--body-font);
+    line-height: var(--line-height);
+    color: var(--font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: black;
+	margin: 2.5rem 0 0.75rem 0;
+    font-style: normal;
+}
+
+html {
+	font-size:20px;
+}
+
+#write {
+	max-width: 600px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+p {
+	margin: 0 0 1.5rem 0;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+h1 {
+	line-height: 1.1;
+    font-size: 2rem;
+    letter-spacing: -0.01em;
+    margin: 2rem 0 2rem 0;
+    font-weight: normal;
+}
+h2 {
+	font-size: 1.4rem;
+    line-height: 1.5;
+    font-style: italic
+}
+h3 {
+	font-size: 1.2rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+h4,h5,h6 {
+	font-weight: normal;
+	font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+	text-transform: uppercase;
+	font-size: 90%;
+}
+
+hr {
+	margin: 1.5rem auto;
+    height: 1.5rem;
+    border: 0;
+    padding: 0;
+    text-align: center;
+}
+
+hr:before {
+	font-size: 1rem;
+    content: "* * *";
+    word-spacing: 1rem;
+}
+
+li {
+	margin-left: 1rem;
+	margin-right: 0;
+	list-style-type: disc;
+}
+
+@media screen and (max-width: 48em) {
+	blockquote {
+		
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.250rem;
+	}
+	.h5,
+	h5 {
+		font-size: 1.150rem;
+	}
+	.h6,
+	h6 {
+		font-size: 1rem;
+	}
+}
+
+a,.md-def-url {
+	color: #990000;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+table {
+	margin-bottom: 20px
+}
+table th,
+table td {
+	padding: 8px;
+	line-height: 1.25rem;
+	vertical-align: top;
+	border-top: 1px solid #ddd
+}
+table th {
+	font-weight: bold
+}
+table thead th {
+	vertical-align: bottom
+}
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+	border-top: 0
+}
+table tbody+tbody {
+	border-top: 2px solid #ddd
+}
+code, .md-fences {
+	padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    line-height: 1.45;
+    word-wrap: normal;
+    white-space: pre;
+    display: inline-block;
+}
+.md-fences {
+	margin: 0 0 20px;
+	font-size: 1em;
+	padding: 1em;
+}
+
+.show-fences-line-number .md-fences {
+	padding-left: 1em;
+}
+ 
+.task-list{
+	padding-left: 0;
+}
+
+.task-list-item {
+	padding-left:2.125rem;
+}
+
+.task-list-item input {
+	top: 3px;
+
+}
+
+.task-list-item input:before {
+	content: "";
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid gray;
+	background-color: #fdfdfd;
+	margin-left: 0;
+	margin-top: -0.5rem;
+}
+.task-list-item input:checked:before,
+.task-list-item input[checked]:before{
+	content: '\25FC';
+	/*◘*/
+	font-size: 0.8125rem;
+	line-height: 0.9375rem;
+	margin-top: -1rem;
+}
+
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .task-list-item input:before {
+    	margin-top: -0.2rem;
+    }
+
+    .task-list-item input:checked:before,
+	.task-list-item input[checked]:before {
+		margin-top: -0.2rem;
+	}
+}
+
+blockquote {
+	margin: 1.5rem 0;
+    padding-left: 2rem;
+    font-size: 0.9rem;
+}
+blockquote p {
+	text-indent: 0 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+blockquote cite {
+    text-indent: 0;
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+cite {
+    display: block;
+    font-style: normal;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+}
+
+cite i {
+    text-transform: none;
+    letter-spacing: 0;
+    font-style: italic;
+    font-feature-settings: normal;
+}
+
+#write pre.md-meta-block {
+	min-height: 30px;
+	background: #f8f8f8;
+	padding: 1.5em;
+	font-weight: 300;
+	font-size: 1em;
+	padding-bottom: 1.5em;
+	padding-top: 3em;
+    margin-top: -1.5em;
+	color: #999;
+	border-left: 1000px #f8f8f8 solid;
+	margin-left: -1000px;
+	border-right: 1000px #f8f8f8 solid;
+	margin-right: -1000px;
+	margin-bottom: 2em;
+}
+.MathJax_Display {
+	font-size: 0.9em;
+	margin-top: 0.5em;
+	margin-bottom: 0;
+}
+p.mathjax-block,
+.mathjax-block {
+	padding-bottom: 0;
+}
+.mathjax-block>.code-tooltip {
+	bottom: 5px;
+	box-shadow: none;
+}
+.md-image>.md-meta {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+.md-image>img {
+	margin-top: 2px;
+}
+.md-image>.md-meta:first-of-type:before {
+	padding-left: 4px;
+}
+sup.md-footnote {
+	padding: 0;
+    background-color: transparent;
+    color: #000;
+    border-radius: 0;
+}
+
+#typora-source {
+	color: #555;
+}
+
+#md-searchpanel {
+    border-bottom: 1px solid #ccc;
+}
+
+#md-searchpanel .btn {
+    border: 1px solid #ccc;
+}
+
+#md-notification:before {
+	top: 14px;
+}
+
+#md-notification {
+	background: #eee;
+}
+
+.megamenu-menu-panel .btn {
+	border: 1px solid #ccc;
+}
